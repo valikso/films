@@ -1,0 +1,240 @@
+$braun1: #C6AC65;
+$braun2: #C3B85B;
+$black: #262219;
+$white: #fff;
+$red: #dc3545;
+$checkboxborder: #4B4B4B;
+$checkboxbg: #C6AC65;
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$pinterest: #cb2027;
+$linkedin: #007bb6;
+$searchbtn: #3C3427;
+$btnblack: #322D21;
+$silvertext: #bbd7e8;
+$silverbg: #F3F3F9;
+$bgtablerow: #F6F6F6;
+$bgAds: #c7ad66;
+
+.no_focus {
+  :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+    box-shadow: none;
+  }
+}
+.no_focus_el {
+  &:active, &:hover, &:focus {
+    outline: 0;
+    outline-offset: 0;
+    box-shadow: none;
+  }
+}
+.no_decoration {
+  :hover {
+    text-decoration: none;
+  }
+}
+
+.no_shadow {
+  box-shadow: none !important;
+}
+
+.card_shadow {
+  box-shadow: 0 1px 5px silver;
+}
+
+.box-shadow-bottom {
+  box-shadow: 0px 16px 25px -24px rgba(0,0,0,1);
+}
+.el_hover {
+  :hover {
+    background: #F3F1F9;
+  }
+}
+.width-50 {
+  width: 50px;
+  height: 25px!important;
+}
+.radius {
+  border-radius: 20px;
+}
+.size36 {
+  font-size: 2.3rem;
+}
+.size06 {
+  font-size: 0.6rem
+}
+.size065 {
+  font-size: 0.65rem;
+}
+
+.size09 {
+  font-size: 0.9rem;
+}
+
+.size10 {
+  font-size: 1rem;
+}
+
+.size15 {
+  font-size: 1.5rem;
+}
+
+.size08 {
+  font-size: 0.8rem;
+}
+
+.size07 {
+  font-size: 0.7rem;
+}
+.text-brown {
+  color: $braun1;
+}
+.silver-text {
+  color: $silvertext;
+}
+
+a.text-brown {
+  &:hover, &:focus, &:active {
+    color: $braun2;
+  }
+}
+
+.text-wrap {
+  word-wrap: break-word;
+}
+
+.text-white {
+  color: $white;
+}
+.text500 {
+  font-weight: 500;
+}
+.text600 {
+  font-weight: 600;
+}
+.text-gray {
+
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+}
+
+.right10{
+  right: 1rem;
+}
+
+.left10{
+  left: 1rem;
+}
+
+.language_ar {
+  .right10{
+    left: 1rem;
+  }
+
+  .left10{
+    right: 1rem;
+  }
+}
+
+.text-black {
+  color: $black;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+$Montserrat: "Montserrat";
+
+.hidden-upload {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.gmail-btn {
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #FFFFFF;
+  color: #E85D53;
+  &-gray {
+    background: #EEEEF4;
+  }
+}
+
+
+.facebook-btn {
+   font-weight: 600;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   margin-top: .7rem;
+   background-color: #4468B0;
+   color: #FFFFFF;
+}
+
+
+.btn-radius {
+  border-radius: 20px;
+}
+.btn-black {
+  background:$btnblack;
+  color: $white;
+}
+.btn-black:hover {
+  background:$btnblack;
+  color: $white;
+}
+
+.btn-brown, .ladda-button.btn-brown {
+  color: #fff;
+  background-color: #C6AC65;
+  border-color: #C6AC65;
+}
+
+.btn-brown:hover, .ladda-button.btn-brown:hover {
+  color: #fff;
+  background-color: #9E843B;
+  border-color: #907322;
+}
+
+.btn-brown:focus, .ladda-button.btn-brown.focus {
+  box-shadow: 0 0 0 0.2rem rgba(198, 172, 101, 0.5);
+}
+
+.btn-brown.disabled, .ladda-button.btn-brown:disabled {
+  background-color: #9E843B;
+  border-color: #907322;
+}
+
+.btn-brown:not([disabled]):not(.disabled):active, .ladda-button.btn-brown:not([disabled]):not(.disabled).active,
+.show > .btn-brown.dropdown-toggle {
+  color: #fff;
+  background-color: #A48738;
+  border-color: #8B6C16;
+  box-shadow: 0 0 0 0.2rem rgba(198, 172, 101, 0.5);
+}
+
+.question-mark {
+  width: 20px;
+}
+
+.btn-group.with_description {
+  .btn, > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0.25rem;
+  }
+}

@@ -1,0 +1,27 @@
+<svg width="28" height="25" viewBox="0 0 28 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>photo-camera</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(2065 2273)">
+<g id="photo-camera" filter="url(#filter0_d)">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(-2061 -2270.98)" fill="#FFFFFF"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path1_fill" transform="translate(-2054.01 -2264.13)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="-2065" y="-2273" width="28" height="25" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<path id="path0_fill" fill-rule="evenodd" d="M 17.3073 2.61035C 18.0424 2.61035 18.6697 2.86548 19.1898 3.37524C 19.7096 3.88501 19.9697 4.50024 19.9696 5.2207L 19.9696 14.3569C 19.9696 15.0776 19.7095 15.6929 19.1896 16.2024C 18.6694 16.7124 18.0421 16.9673 17.307 16.9673L 2.6626 16.9673C 1.92749 16.9673 1.30005 16.7124 0.780029 16.2024C 0.26001 15.6929 0 15.0776 0 14.3569L 0 5.2207C 0 4.50024 0.26001 3.88501 0.780029 3.37524C 1.30005 2.86548 1.92749 2.61035 2.6626 2.61035L 4.99243 2.61035L 5.52295 1.22388C 5.65454 0.890869 5.89551 0.603516 6.24561 0.362061C 6.59595 0.12085 6.95483 0 7.32227 0L 12.6477 0C 13.0151 0 13.3739 0.12085 13.7241 0.362061C 14.0745 0.603516 14.3153 0.890869 14.4471 1.22388L 14.9775 2.61035L 17.3073 2.61035ZM 9.98486 14.3572C 11.2676 14.3572 12.3647 13.9102 13.2766 13.0161C 14.1886 12.1223 14.6444 11.0464 14.6444 9.78906C 14.6444 8.53125 14.1885 7.45557 13.2766 6.56177C 12.3647 5.66797 11.2676 5.22095 9.98486 5.22095C 8.7019 5.22095 7.60474 5.66772 6.69287 6.56177C 5.78125 7.45581 5.3252 8.53125 5.3252 9.78906C 5.3252 11.0464 5.78101 12.1223 6.69287 13.0161C 7.60474 13.9102 8.7019 14.3572 9.98486 14.3572Z"/>
+<path id="path1_fill" d="M 2.99556 0C 2.17038 0 1.46485 0.287214 0.878907 0.861714C 0.292969 1.43614 0 2.12771 0 2.93686C 0 3.74568 0.292969 4.43736 0.878907 5.01179C 1.46485 5.58611 2.17035 5.87332 2.99556 5.87332C 3.82062 5.87332 4.52623 5.58611 5.11217 5.01179C 5.69811 4.43736 5.99111 3.74571 5.99111 2.93686C 5.99111 2.12775 5.69811 1.43618 5.11217 0.861714C 4.52627 0.28725 3.82062 0 2.99556 0Z"/>
+</defs>
+</svg>

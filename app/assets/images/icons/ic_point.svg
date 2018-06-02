@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="14px" viewBox="0 0 10 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_point</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="detail-list" transform="translate(-218.000000, -73.000000)" fill="#C6AC65" fill-rule="nonzero">
+            <g id="Group-2">
+                <g id="Group-9" transform="translate(218.000000, 73.000000)">
+                    <g id="ic_point">
+                        <path d="M8.38472727,1.42978182 C7.46276364,0.507818182 6.23687273,0 4.93309091,0 C3.62905455,0 2.40341818,0.507818182 1.48145455,1.42978182 C-0.224763636,3.13574545 -0.4368,6.34556364 1.02225455,8.29029091 L4.93309091,13.9381455 L8.83807273,8.29818182 C10.3029818,6.34556364 10.0909455,3.13574545 8.38472727,1.42978182 Z M4.97814545,6.61818182 C3.99585455,6.61818182 3.19632727,5.81865455 3.19632727,4.83636364 C3.19632727,3.85407273 3.99585455,3.05454545 4.97814545,3.05454545 C5.96043636,3.05454545 6.75996364,3.85407273 6.75996364,4.83636364 C6.75996364,5.81865455 5.96043636,6.61818182 4.97814545,6.61818182 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

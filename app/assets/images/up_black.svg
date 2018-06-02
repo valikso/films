@@ -1,0 +1,35 @@
+<svg width="13" height="7" viewBox="0 0 13 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>arrow-point-to-right 2</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(4517 3041)">
+<rect x="-4517" y="-3041" width="13" height="7" fill="#FFFFFF"/>
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M -4809 -3174L -4489 -3174L -4489 -2397L -4809 -2397L -4809 -3174Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="Search Results - Filters" clip-path="url(#clip-0)">
+<path d="M -4809 -3174L -4489 -3174L -4489 -2397L -4809 -2397L -4809 -3174Z" fill="#FFFFFF"/>
+<g id="filter expand">
+<g id="Rectangle Copy" filter="url(#filter0_d)">
+<use xlink:href="#path0_fill" transform="translate(-4809 -3055)" fill="#F3F3F9"/>
+</g>
+<g id="arrow-point-to-right 2">
+<g id="Shape">
+<use xlink:href="#path1_fill" transform="matrix(6.12323e-17 -1 -1 -6.12323e-17 -4504 -3034)" fill="#322D21"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="-4809" y="-3055" width="320" height="36" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.85879 0 0 0 0 0.85879 0 0 0 0 0.85879 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 320 0L 320 35L 0 35L 0 0Z"/>
+<path id="path1_fill" d="M 6.73128 6.73099L 1.46432 11.9978C 1.12927 12.333 0.58606 12.333 0.25118 11.9978C -0.0837267 11.6629 -0.0837267 11.1197 0.25118 10.7848L 4.91163 6.1245L 0.251316 1.46436C -0.0835912 1.12932 -0.0835912 0.586188 0.251316 0.251281C 0.586223 -0.0837605 1.12941 -0.0837605 1.46445 0.251281L 6.73141 5.51815C 6.89887 5.68569 6.9825 5.90503 6.9825 6.12448C 6.9825 6.34403 6.89871 6.56354 6.73128 6.73099Z"/>
+</defs>
+</svg>

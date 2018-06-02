@@ -1,0 +1,20 @@
+<svg width="44" height="44" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group 2 Copy 2</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(6815 -42)">
+<g id="Group 2 Copy 2">
+<g id="Rectangle Copy">
+<use xlink:href="#path0_fill" transform="translate(-6815 42)" fill="#C7AD66"/>
+</g>
+<g id="arrow-point-to-right">
+<g id="Shape">
+<use xlink:href="#path1_fill" transform="translate(-6797.99 55)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 3C 0 1.34315 1.34315 0 3 0L 40.41 0C 42.0669 0 43.41 1.34315 43.41 3L 43.41 40.41C 43.41 42.0669 42.0669 43.41 40.41 43.41L 3 43.41C 1.34315 43.41 0 42.0669 0 40.41L 0 3Z"/>
+<path id="path1_fill" d="M 9.62413 9.62373L 2.09362 17.154C 1.61459 17.6333 0.837926 17.6333 0.359128 17.154C -0.119709 16.6752 -0.119709 15.8985 0.359128 15.4197L 7.02246 8.7566L 0.359322 2.09369C -0.119516 1.61466 -0.119516 0.83811 0.359322 0.359273C 0.838159 -0.119758 1.61479 -0.119758 2.09382 0.359273L 9.62432 7.88966C 9.86374 8.1292 9.98331 8.4428 9.98331 8.75656C 9.98331 9.07047 9.86351 9.38431 9.62413 9.62373Z"/>
+</defs>
+</svg>

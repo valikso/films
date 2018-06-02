@@ -1,0 +1,20 @@
+<svg width="45" height="45" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group 7</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(8228 3050)">
+<g id="Group 7">
+<g id="qatar">
+<g id="Rectangle-path">
+<use xlink:href="#path0_fill" transform="translate(-8227.36 -3049.36)" fill="#A10D50"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path1_fill" transform="translate(-8227.36 -3049.36)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 43.7194 0L 43.7194 43.7194L 0 43.7194L 0 0Z"/>
+<path id="path1_fill" d="M 18.0706 3.64465L 11.0755 7.28798L 18.0706 10.9312L 11.0755 14.5745L 18.0706 18.2177L 11.0755 21.8624L 18.0706 25.5043L 11.0755 29.1475L 18.0706 32.7908L 11.0755 36.4326L 18.0706 40.0758L 11.0755 43.7192L 0 43.7192L 0 0L 11.0755 0L 18.0706 3.64465Z"/>
+</defs>
+</svg>

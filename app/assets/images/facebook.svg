@@ -1,0 +1,20 @@
+<svg width="19" height="18" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>facebook</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(7845 1683)">
+<g id="facebook">
+<mask id="mask0_outline" mask-type="alpha">
+<g id="Clip 2">
+<use xlink:href="#path0_fill" transform="translate(-7844.26 -1683)" fill="#FFFFFF"/>
+</g>
+</mask>
+<g id="Fill 1" mask="url(#mask0_outline)">
+<use xlink:href="#path1_fill" transform="translate(-7844.26 -1683)" fill="#C7AD66"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 17.3309L 17.3716 17.3309L 17.3716 0L 0 0L 0 17.3309Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 16.4128 0L 0.958744 0C 0.429189 0 0 0.428185 0 0.956501L 0 16.3744C 0 16.9027 0.429189 17.331 0.958744 17.331L 9.27873 17.331L 9.27873 10.6195L 7.01484 10.6195L 7.01484 8.00389L 9.27873 8.00389L 9.27873 6.07498C 9.27873 3.83652 10.6491 2.61762 12.6507 2.61762C 13.6095 2.61762 14.4335 2.68879 14.6736 2.7206L 14.6736 5.05997L 13.2854 5.06062C 12.1969 5.06062 11.9861 5.57667 11.9861 6.33394L 11.9861 8.00389L 14.5822 8.00389L 14.2442 10.6195L 11.9861 10.6195L 11.9861 17.331L 16.4128 17.331C 16.9423 17.331 17.3716 16.9027 17.3716 16.3744L 17.3716 0.956501C 17.3716 0.428185 16.9423 0 16.4128 0Z"/>
+</defs>
+</svg>

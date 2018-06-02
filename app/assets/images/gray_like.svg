@@ -1,0 +1,14 @@
+<svg width="30" height="26" viewBox="0 0 30 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>big-heart</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(3210 2616)">
+<g id="big-heart">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(-3209.11 -2616)" fill="#D2D2D2"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 14.172 25.9906C -13.4773 10.5363 6.51952 -8.67705 14.172 4.2628C 21.8257 -8.67705 41.8237 10.5363 14.172 25.9906Z"/>
+</defs>
+</svg>

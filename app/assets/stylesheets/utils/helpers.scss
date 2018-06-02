@@ -1,0 +1,48 @@
+.right-15px {
+  right: 15px;
+}
+
+.left-15px {
+  left: 15px;
+}
+
+.right-0 {
+  right: 0;
+}
+.right-005 {
+  right: -5px;
+}
+
+.language_ar {
+  .right-15px {
+    left: 15px;
+  }
+
+  .left-15px {
+    right: 15px;
+  }
+
+  .right-0 {
+    left: 0;
+  }
+
+  .nav_en {
+    img {
+      max-width: 20px;
+      max-height: 20px;
+    }
+  }
+}
+
+.crope-img {
+  img {
+    max-width: 27px;
+  }
+}
+@media (min-width: 768px) {
+  .equipment_row_img {
+    max-width: 210px;
+    max-height: 210px;
+    min-width: 210px;
+  }
+}
