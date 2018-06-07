@@ -16,6 +16,7 @@
  *= require libs/jasny-bootstrap
  *= require libs/select2
  *= require utils/helpers
+ *= require utils/_variables
  *= require libs/bootstrap-datepicker
  *= require pages
 

@@ -10,6 +10,22 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
-//= require turbolinks
-//= require_tree .
+//= require libs/jquery.serializeObject.js
+//= require libs/toastr.min
+//= require libs/jasny-bootstrap
+//= require libs/toast_configs
+//= require libs/popper.min
+//= require libs/bootstrap.bundle
+// require libs/jquery.cookie
+//= require libs/sharer
+//= require libs/select2.full
+//= require libs/cropper
+//= require libs/spin.min
+//= require libs/ladda.min
+//= require libs/bootstrap-datepicker.min
+//= require libs/bootstrap-datepicker.ar.min
+//= require libs/clamp.min
+//= require libs/prefixfree.min
+

@@ -1,0 +1,70 @@
+.container
+  %h1
+    Total count of contact requests:
+    %span.text-brown
+      #{@info}
+  %h1.mt-5
+    Overview: How the Pieces Fit Together
+  This guide focuses on the interaction between Controller and View in the Model-View-Controller triangle. As you know, the Controller is responsible for orchestrating the whole process of handling a request in Rails, though it normally hands off any heavy code to the Model. But then, when it's time to send a response back to the user, the Controller hands things off to the View. It's that handoff that is the subject of this guide.
+
+  In broad strokes, this involves deciding what should be sent as the response and calling an appropriate method to create that response. If the response is a full-blown view, Rails also does some extra work to wrap the view in a layout and possibly to pull in partial views. You'll see all of those paths later in this guide.
+
+  2 Creating Responses
+  From the controller's point of view, there are three ways to create an HTTP response:
+
+  Call render to create a full response to send back to the browser
+  Call redirect_to to send an HTTP redirect status code to the browser
+  Call head to create a response consisting solely of HTTP headers to send back to the browser
+  2.1 Rendering by Default: Convention Over Configuration in Action
+  You've heard that Rails promotes "convention over configuration". Default rendering is an excellent example of this. By default, controllers in Rails automatically render views with names that correspond to valid routes. For example, if you have this code in your BooksController class:
+
+  class BooksController < ApplicationController
+  end
+  And the following in your routes file:
+
+  resources :books
+  And you have a view file app/views/books/index.html.erb:
+  Rails will automatically render app/views/books/index.html.erb when you navigate to /books and you will see "Books are coming soon!" on your screen.
+
+  However a coming soon screen is only minimally useful, so you will soon create your Book model and add the index action to BooksController:
+
+  Note that we don't have explicit render at the end of the index action in accordance with "convention over configuration" principle. The rule is that if you do not explicitly render something at the end of a controller action, Rails will automatically look for the action_name.html.erb template in the controller's view path and render it. So in this case, Rails will render the app/views/books/index.html.erb file.
+
+  If we want to display the properties of all the books in our view, we can do so with an ERB template like this:
+  The actual rendering is done by nested classes of the module ActionView::Template::Handlers. This guide does not dig into that process, but it's important to know that the file extension on your view controls the choice of template handler.
+
+  2.2 Using render
+  In most cases, the ActionController::Base#render method does the heavy lifting of rendering your application's content for use by a browser. There are a variety of ways to customize the behavior of render. You can render the default view for a Rails template, or a specific template, or a file, or inline code, or nothing at all. You can render text, JSON, or XML. You can specify the content type or HTTP status of the rendered response as well.
+
+  If you want to see the exact results of a call to render without needing to inspect it in a browser, you can call render_to_string. This method takes exactly the same options as  render, but it returns a string instead of sending a response back to the browser.
+
+  2.2.1 Rendering an Action's View
+  If you want to render the view that corresponds to a different template within the same controller, you can use render with the name of the view:
+
+
+  If the call to update fails, calling the update action in this controller will render the edit.html.erb template belonging to the same controller.
+
+  If you prefer, you can use a symbol instead of a string to specify the action to render:
+  2.2.2 Rendering an Action's Template from Another Controller
+  What if you want to render a template from an entirely different controller from the one that contains the action code? You can also do that with render, which accepts the full path (relative to app/views) of the template to render. For example, if you're running code in an AdminProductsController that lives in app/controllers/admin, you can render the results of an action to a template in app/views/products this way:
+
+  render "products/show"
+  Rails knows that this view belongs to a different controller because of the embedded slash character in the string. If you want to be explicit, you can use the :template option (which was required on Rails 2.2 and earlier):
+
+  render template: "products/show"
+  2.2.3 Rendering an Arbitrary File
+  The render method can also use a view that's entirely outside of your application:
+
+  render file: "/u/apps/warehouse_app/current/app/views/products/show"
+  The :file option takes an absolute file-system path. Of course, you need to have rights to the view that you're using to render the content.
+
+  Using the :file option in combination with users input can lead to security problems since an attacker could use this action to access security sensitive files in your file system.
+
+  By default, the file is rendered using the current layout.
+
+  If you're running Rails on Microsoft Windows, you should use the :file option to render a file, because Windows filenames do not have the same format as Unix filenames.
+
+  2.2.4 Wrapping it up
+  The above three ways of rendering (rendering another template within the controller, rendering a template within another controller and rendering an arbitrary file on the file system) are actually variants of the same action.
+
+  In fact, in the BooksController class, inside of the update action where we want to render the edit template if the book does not update successfully, all of the following render calls would all render the  edit.html.erb template in the views/books directory:

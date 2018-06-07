@@ -59,7 +59,8 @@ html {
   min-height: 51px;
 
   @media (min-width: 768px) {
-    background-image: asset-data-url("header_bg.png");
+    // background-image: asset-data-url("header_bg.png");
+    background-color: gray;
     padding: .3rem;
     background-size: cover;
     background-position-y: 50%;
@@ -1081,7 +1082,7 @@ html {
   min-height: 51px;
 
   @media (min-width: 768px) {
-    background-image: asset-data-url("header_bg.png");
+    // background-image: asset-data-url("header_bg.png");
     padding: .3rem;
     background-size: cover;
     background-position-y: 50%;
