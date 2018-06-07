@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.htm
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  # devise_for :users, controllers: {
+  #     sessions: 'users/sessions',
+  #     registrations: 'users/registrations',
+  #     confirmations: 'users/confirmations',
+  #     passwords: 'users/passwords',
+  # }
 
-    root to: 'pages#home'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+
+  root to: 'pages#home'
+  post "/contact_us", to: 'pages#send_message'
+  get "/contact_us", to: 'pages#contact_us'
+  post 'contact_us', to: 'pages#send_message', as: 'contact_us_post'
+  get 'about_us', to: 'pages#about_us'
 end

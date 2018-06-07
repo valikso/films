@@ -1,160 +1,33 @@
-%nav#myNavmenu.mobile-side-navbar.navmenu.navmenu-default.offcanvas{ role: "navigation", class: I18n.locale == :ar ? 'navmenu-fixed-right' : 'navmenu-fixed-left'}
-  %ul.list-group.mobile-side-navbar__list
-    %li.nav-item.mobile-side-navbar__list__list-item
-      %a.text-left.nav-link{ href:root_path }= t('nav.Home')
-    %li.nav-item.mobile-side-navbar__list__list-item
-      %a.text-left.nav-link{ href: "#"}= t('nav.News')
-    -#%li.nav-item.mobile-side-navbar__list__list-item
-      %a.text-left.nav-link{ href: en_news_render_to_pdf_path}
-        Download in PDF
-    %li.nav-item.mobile-side-navbar__list__list-item
-      %a.text-left.nav-link{ href: "#"}= t('nav.Magazines')
-    %li.nav-item.mobile-side-navbar__list__list-item
-      %a.text-left.nav-link{ href: "#"}= t('nav.Exhibition Calendar')
-    %li.nav-item.mobile-side-navbar__list__list-item
-      %a.text-left.nav-link{ href: "#" }= t('nav.Auctions Calendar')
-    -# %li.nav-item.mobile-side-navbar__list__list-item
-    -#   - if current_user
-    -#     %a.nav-link{ href: with_locale(compare_index_path) }
-    -#       = t('nav.Compare')
-    -#       -if current_user.equipment_items_compares.count > 0
-    -#         %span.badge.badge-pill.badge-warning.compare_count_js
-    -#           = current_user.equipment_items_compares.count
-    - if current_user
-      %li.text-left.px-3
-        = link_to t('nav.Sign Out'), with_locale(destroy_user_session_path), method: :delete, class: 'mt-1 text-danger size09'
-    -#%li.nav-item.mobile-side-navbar__list__list-item
-    -#  %a.nav-link{ href: with_locale(how_to_sell_path) }= t('nav.How to Sell')
-    -#%li.nav-item.mobile-side-navbar__list__list-item
-    -#  %a.nav-link{ href: "#"}= t('nav.Exhobition Calendar')
-    -#%li.nav-item.mobile-side-navbar__list__list-item
-    -#  %a.nav-link{ href: "#"}= t('nav.Auctions Calendar')
-    -#%li.nav-item.mobile-side-navbar__list__list-item
-    -#  %a.nav-link{ href: with_locale(about_us_path) }= t('nav.About Us')
+.container
+  .jumbotron
+    %h1.display-4 Hello, world!
+    %p.lead This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+    %hr.my-4/
+    %p It uses utility classes for typography and spacing to space content out within the larger container.
+    %a.btn.btn-primary.btn-lg{:href => contact_us_path, :role => "button"} Learn more
+  .card{:style => "width: 18rem;"}
+    %img.card-img-top{:alt => "Card image cap", :src => ".../100px180/?text=Image cap"}/
+    .card-body
+      %h5.card-title Card title
+      %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    %ul.list-group.list-group-flush
+      %li.list-group-item Cras justo odio
+      %li.list-group-item Dapibus ac facilisis in
+      %li.list-group-item Vestibulum at eros
+    .card-body
+      %a.card-link{:href => "#"} Card link
+      %a.card-link{:href => "#"} Another link
 
-  %ul.list-group.mobile-side-navbar__list.mobile_bottom_links.w-100.position-absolute
-    %li.nav-item.mobile-side-navbar__list__list-item.border-0
-      %a.text-left.nav-link.bottom_links_item.text-muted.text-capitalize.size07{ href: "#"}= t('mobile-nav-bottom.How To Buy')
-
-    %li.nav-item.mobile-side-navbar__list__list-item.border-0
-      %a.text-left.nav-link.bottom_links_item.text-muted.text-capitalize.size07{ href: "#"}= t('mobile-nav-bottom.How To Sell')
-
-    %li.nav-item.mobile-side-navbar__list__list-item.border-0
-      %a.text-left.nav-link.bottom_links_item.text-muted.text-capitalize.size07{ href: "#"}= t('mobile-nav-bottom.About Us')
-
-%nav.mobile-site-navbar.navbar.px-md-0.navbar-fixed-top.navbar-expand-md.nav-light.py-0
-  .container
-    .d-flex.canvas-menu.mobile-site-navbar__canvas-mobile-navigation.d-md-none
-      %button.nav-canvas-button.navbar-toggle.p-0{"data-canvas" => "body", "data-target" => "#myNavmenu", "data-toggle" => "offcanvas", :type => "button"}
-        -# = image_tag "menu-button.svg"
-    %span.navbar-text.small.text-truncate.mobile-site-navbar__logo.d-md-none
-      -# = link_to with_locale(root_path) do
-      -#   = website_logo
-
-    .full-screen-navbar__user_profile.canvas-menu.ml-1
-    .collapse.navbar-collapse
-      %ul.navbar-nav.mr-auto.hover_white
-        %li.nav-item
-          -#%a#langDropdown.pl-md-0.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "#", role: "button"}
-          -#  = image_tag "locale-#{I18n.locale}.png"
-          -#.dropdown-menu{"aria-labelledby" => "langDropdown"}
-
-          -#%li.nav-item
-          -#- if ar_locale?
-          -#  %a.nav_en.nav_locale{ class: "#{en_locale? ? "active" : "not_active" }", href: "#{ en_locale? ? '#' : '/en/set_locale' }" }
-          -#    = image_tag "eng.svg"
-          -#    %span.link_header.text-white
-          -#      English
-          -#- else
-          -#  %a.nav_ar.nav_locale{ class: "#{ar_locale? ? "active" : "not_active" }", href: "#{ ar_locale? ? '#' : '/ar/set_locale' }" }
-          -#    = image_tag "arabian.svg"
-          -#    %span.link_header.text-white
-          -#      العربية
-
-          %li.nav-item.nav_desktop
-            %a.text-white{ href: "#" }= t('nav.Magazines')
-
-          %li.nav-item.nav_desktop
-            %a.text-white{ href: "#"}= t('nav.Exhibition Calendar')
-
-          %li.nav-item.nav_desktop
-            %a.text-white{ href: "#"}= t('nav.Auctions Calendar')
-
-          %li.nav-item.nav_desktop
-            %a.text-white{ href: "#" }= t('nav.How to Buy')
-
-          %li.nav-item.nav_desktop
-            %a.text-white{ href: "#" }= t('nav.How to Sell')
-
-          %li.nav-item.nav_desktop
-            %a.text-white{ href: "#"}= t('nav.News')
-          %li.nav-item.nav_desktop
-            = link_to t('nav.Sign in'), new_user_session_path , class: 'nav-link nav_sign_in_link mt-1 text-brown px-1'
-
-
-      -#   %ul.navbar-nav.ml-1
-      -#     %li.nav-item
-      -#       - if ar_locale?
-      -#         %a.nav-link.nav_en.nav_locale.px-0{ class: "#{en_locale? ? "active" : "not_active" }", href: "#{ en_locale? ? '#' : '/en/set_locale' }" }
-      -#           = image_tag "eng.png"
-      -#           %span.link_header.text-white
-      -#             English
-      -#       - else
-      -#         %a.nav-link.nav_ar.nav_locale.px-0{ class: "#{ar_locale? ? "active" : "not_active" }", href: "#{ ar_locale? ? '#' : '/ar/set_locale' }" }
-      -#           = image_tag "arabian.svg"
-      -#           %span.link_header.text-white
-      -#             العربية
-      -#
-    -#   - if current_user
-    -#     -# %li.nav-item
-    -#     -#   %a.nav-link.pr-0{ href: with_locale(compare_index_path), title: t('nav_compare') }
-    -#     -#     = image_tag "icons/compare-icon.svg", class: 'top-nav-icon'
-    -#     -#     - if current_user.equipment_items_compares.count > 0
-    -#     -#       %span.badge.badge-warning.compare_item_count.compare_count_js.size06
-    -#     -#         = current_user.equipment_items_compares.count
-    -#     %li.nav-item
-    -#       %a.nav-link.px-1{ href:  with_locale("/user_profile/#{current_user.id}"), title: t('nav.Profile') }
-    -#         = image_tag "header_user.svg"
-    -#     %li.nav-item.link_header
-    -#       = link_to t('nav.Sign Out'), with_locale(destroy_user_session_path), method: :delete, class: 'mt-1 nav-link text-brown pl-1 pr-0 '
-    -#
-    -#   - else
-    -#     - if root_path
-    -#       %li.nav-item.link_header
-    -#         = link_to t('nav.Sign in'), new_user_session_path , class: 'nav-link nav_sign_in_link mt-1 text-brown px-1'
-    -#     - else
-    -#       %li.nav-item.link_header
-    -#         = link_to t('nav.Sign in'), new_user_session_path, class: 'openLoginDialogJS nav-link nav_sign_in_link mt-1 text-brown px-1'
-    -#     %li.nav-item
-    -#       %span.nav-link.px-0.text-white.link_header.mt-1
-    -#         = t('nav.or')
-    -#     - if root_path
-    -#       %li.nav-item.link_header
-    -#         = link_to t('nav.Sign up'), new_user_registration_path, class: 'nav-link nav_sign_up_link mt-1 text-brown pl-1 pr-0'
-    -#     - else
-    -#       %li.nav-item.link_header
-    -#         = link_to t('nav.Sign up'), new_user_registration_path , class: 'openPasswordDialogJS nav-link nav_sign_up_link mt-1 text-brown pl-1 pr-0'
-    -#
-    -# .mobile-site-navbar__user_profile.canvas-menu.d-md-none
-    -#   %ul.navbar-nav.ml-auto.d-block
-    -#     %li.nav-item.d-inline-block.mr-3
-    -#       -# - if ar_locale?
-    -#       -#   %a{ class: "#{en_locale? ? "active" : "not_active" }", href: "#{ en_locale? ? '#' : '/en/set_locale' }" }
-    -#       -#
-    -#       -#     = image_tag "eng.png"
-    -#       -#
-    -#       -# - else
-    -#       -#   %a{ class: "#{ar_locale? ? "active" : "not_active" }", href: "#{ ar_locale? ? '#' : '/ar/set_locale' }" }
-    -#       -#     = image_tag "m-arabian.svg"
-    -#       -#
-    -#       -# -#%a{ href: with_locale(new_user_session_path), title: t('nav.Profile') }
-    -#       -#   = image_tag "eng.svg"
-    -#
-    -#     - if current_user
-    -#       %li.nav-item.d-inline-block
-    -#         %a{ href:  with_locale("/user_profile/#{current_user.id}"), title: t('nav.Profile') }
-    -#           = image_tag "user.svg"
-    -#     - else
-    -#       %li.nav-item.d-inline-block
-    -#         %a{ href: new_user_session_path , class: 'openLoginDialogJS' }
-    -#           = image_tag "login.svg", class: 'nav-login-icon'
+  .row.mt-4
+    .col-sm-6
+      .card
+        .card-body
+          %h5.card-title Special title treatment
+          %p.card-text With supporting text below as a natural lead-in to additional content.
+          %a.btn.btn-primary{:href => "#"} Go somewhere
+    .col-sm-6
+      .card
+        .card-body
+          %h5.card-title Special title treatment
+          %p.card-text With supporting text below as a natural lead-in to additional content.
+          %a.btn.btn-primary{:href => "#"} Go somewhere

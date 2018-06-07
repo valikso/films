@@ -1,0 +1,38 @@
+.container.mt-4
+  .row
+    .col-4.offset-4
+      %h2.text-center
+        Sign up
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .row
+          .form-group.col-12
+            = f.label :first_name, class: 'sr-only'
+            = f.text_field :first_name, value: params[:first_name] || resource.first_name, placeholder: "First name", required: true, autofocus: true, class: 'form-control registration-input p-0 size07 rounded-0 text-black'
+        .row
+          .form-group.col-12
+            = f.label :last_name, class: 'sr-only'
+            = f.text_field :last_name, value: params[:last_name] || resource.last_name, placeholder: "Last name", required: true, autofocus: true, class: 'form-control registration-input p-0 size07 rounded-0 text-black'
+        .row
+          .form-group.col-12
+            = f.label :email, class: 'sr-only'
+            = f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email", class: 'form-control registration-input p-0 size07 rounded-0'
+        .row
+          .form-group.col-12
+            = f.label :age, class: 'sr-only'
+            = f.text_field :age, placeholder: "Age", autofocus: true, autocomplete: "off", class: 'form-control registration-input p-0 size07 rounded-0'
+        .row
+          .form-group.col-12
+            = f.label :phone, class: 'sr-only'
+            = f.telephone_field :phone, placeholder: "Phone", autofocus: true, autocomplete: "off", class: 'form-control registration-input p-0 size07 rounded-0'
+        .row
+          .form-group.col-12
+            = f.label :password, class: "sr-only"
+            = f.password_field :password, autocomplete: "off", required: true, autocomplete: "off", placeholder: "Password",class: 'form-control registration-input p-0 size07 rounded-0 text-black'
+        .form-group
+          = f.label :password_confirmation, class: "sr-only"
+          = f.password_field :password_confirmation, autocomplete: "off", required: true, autocomplete: "off", placeholder: "Confirm password", class: 'form-control registration-input p-0 size07 rounded-0 text-black'
+        .form-group.text-center
+          = f.submit "Sign up" , class: 'btn btn-success'
+        .text-center
+          = render "devise/shared/links"
