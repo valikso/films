@@ -1,0 +1,46 @@
+.container.border
+  .row
+    .col-12.pb-3
+      = image_tag @film.logo, style: "max-width: 100%;"
+  .row
+    .col-6
+      Film title:
+      = @film.title
+  .row
+    .col-6
+      Film author:
+      = @film.author
+  .row
+    .col-6
+      Film year:
+      = @film.year
+  .row
+    .col-6
+      Description
+      = @film.description
+
+
+
+  .row
+    .col-12.border
+      %h1.text-center
+        Comments
+      - @film.film_comments.each do |comment|
+        .comment.border.size07
+          = comment.user_name
+          #{": "}
+          = comment.message
+          .text-muted.size065
+            = comment.created_at.strftime("Cteated at %I:%M%p")
+      %h1.text-center
+        New comment
+      = form_for([@film, @film.film_comments.build]) do |f|
+        %p
+          .form-group
+          = f.label :user_name, "Your name", class: "sr-only"
+          = f.text_field :user_name, :class => "form-control", :placeholder => "Your name"
+          .form-group
+            = f.label :message, "Ender text", class: "sr-only"
+            = f.text_field :message, :class => "form-control", :placeholder => "Comment"
+          .form-group.text-center
+            = f.submit "Submit", :class => "btn btn-success"

@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
+  resources :films do
+    resources :film_comments
+  end
 
   root to: 'pages#home'
   post "/contact_us", to: 'pages#send_message'

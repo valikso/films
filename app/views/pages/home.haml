@@ -5,29 +5,37 @@
     %hr.my-4/
     %p It uses utility classes for typography and spacing to space content out within the larger container.
     %a.btn.btn-primary.btn-lg{:href => contact_us_path, :role => "button"} Learn more
-  .card{:style => "width: 18rem;"}
-    %img.card-img-top{:alt => "Card image cap", :src => ".../100px180/?text=Image cap"}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    %ul.list-group.list-group-flush
-      %li.list-group-item Cras justo odio
-      %li.list-group-item Dapibus ac facilisis in
-      %li.list-group-item Vestibulum at eros
-    .card-body
-      %a.card-link{:href => "#"} Card link
-      %a.card-link{:href => "#"} Another link
+  - @films.each do |film|
+    .card{:style => "width: 300px;"}
+      = image_tag 'test_card.jpg', style: "max-height:200px;"
+      .card-body
+        %h5.card-title
+          = film.title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+      %ul.list-group.list-group-flush
+        %li.list-group-item
+          Year:
+          = film.year
+        %li.list-group-item
+          Author:
+          = film.author
+        %li.list-group-item
+          Film budget: 6.000.000
+      .card-body
+        = link_to 'Show info', film_path(film.id)
+        -# %a.card-link{:href => "#"} Show more
+        -# %a.card-link{:href => "#"} Another link
 
-  .row.mt-4
-    .col-sm-6
-      .card
-        .card-body
-          %h5.card-title Special title treatment
-          %p.card-text With supporting text below as a natural lead-in to additional content.
-          %a.btn.btn-primary{:href => "#"} Go somewhere
-    .col-sm-6
-      .card
-        .card-body
-          %h5.card-title Special title treatment
-          %p.card-text With supporting text below as a natural lead-in to additional content.
-          %a.btn.btn-primary{:href => "#"} Go somewhere
+    .row.mt-4
+      .col-sm-6
+        .card
+          .card-body
+            %h5.card-title Special title treatment
+            %p.card-text With supporting text below as a natural lead-in to additional content.
+            %a.btn.btn-primary{:href => "#"} Go somewhere
+      .col-sm-6
+        .card
+          .card-body
+            %h5.card-title Special title treatment
+            %p.card-text With supporting text below as a natural lead-in to additional content.
+            %a.btn.btn-primary{:href => "#"} Go somewhere

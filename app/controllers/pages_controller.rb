@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @films = Film.all.limit(2)
   end
 
   def about_us

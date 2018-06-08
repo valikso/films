@@ -4,7 +4,7 @@ class CreateFilms < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :year
       t.string :author
-      t.string :descrintion
+      t.string :description
       t.json :logo
 
       t.timestamps
