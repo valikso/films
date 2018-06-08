@@ -6,8 +6,8 @@ ActiveAdmin.register Film do
     column :title
     column :year
     column :author
-    column :logo do |e|
-      image_tag(e.logo.thumb.url, style: "max-height:250px;")
+    column :logo, :sortable => false do |e|
+      image_tag(e.logo.url, style: "max-height:250px;")
     end
     column :created_at
     actions
