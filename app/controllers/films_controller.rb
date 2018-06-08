@@ -4,6 +4,7 @@ class FilmsController < ApplicationController
     @film = Film.find_by_id(params[:id])
   end
   def index
+    @films = Film.all
   end
 private
 

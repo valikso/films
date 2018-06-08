@@ -1,17 +1,18 @@
 .container
   .jumbotron
-    %h1.display-4 Hello, world!
+    %h1.display-4 Hello, my dear friend!
     %p.lead This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
     %hr.my-4/
     %p It uses utility classes for typography and spacing to space content out within the larger container.
-    %a.btn.btn-primary.btn-lg{:href => contact_us_path, :role => "button"} Learn more
+    %a.btn.btn-primary.btn-lg{:href => new_user_registration_path, :role => "button"} Registration
   - @films.each do |film|
-    .card{:style => "width: 300px;"}
-      = image_tag 'test_card.jpg', style: "max-height:200px;"
+    .card.pt-2.d-sm-none.d-md-inline-flex{:style => "width: 270px;"}
+      = image_tag film.logo , style: "max-height:210px;"
       .card-body
         %h5.card-title
           = film.title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+        %p.card-text
+          = film.small_description
       %ul.list-group.list-group-flush
         %li.list-group-item
           Year:
@@ -22,20 +23,23 @@
         %li.list-group-item
           Film budget: 6.000.000
       .card-body
-        = link_to 'Show info', film_path(film.id)
-        -# %a.card-link{:href => "#"} Show more
-        -# %a.card-link{:href => "#"} Another link
+        = link_to 'Show more info', film_path(film.id)
+    -# #carouselExampleFade.carousel.slide.carousel-fade{"data-ride" => "carousel"}
+    -#   .carousel-inner
+    -#     .carousel-item.active
+    -#       = image_tag film.logo
+    -#       -# %img.d-block.w-100{:alt => "First slide", :src => film.logo}/
+    -#     .carousel-item
+    -#       %img.d-block.w-100{:alt => "Second slide", :src => ".../800x400?auto=yes&bg=666&fg=444&text=Second slide"}/
+    -#     .carousel-item
+    -#       = image_tag film.logo
+    -#
+    -#       -# %img.d-block.w-100{:alt => "Third slide", :src => ".../800x400?auto=yes&bg=555&fg=333&text=Third slide"}/
+    -#   %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleFade", :role => "button"}
+    -#     %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+    -#     %span.sr-only Previous
+    -#   %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleFade", :role => "button"}
+    -#     %span.carousel-control-next-icon{"aria-hidden" => "true"}
+    -#     %span.sr-only Next
 
-    .row.mt-4
-      .col-sm-6
-        .card
-          .card-body
-            %h5.card-title Special title treatment
-            %p.card-text With supporting text below as a natural lead-in to additional content.
-            %a.btn.btn-primary{:href => "#"} Go somewhere
-      .col-sm-6
-        .card
-          .card-body
-            %h5.card-title Special title treatment
-            %p.card-text With supporting text below as a natural lead-in to additional content.
-            %a.btn.btn-primary{:href => "#"} Go somewhere
+  = render partial: 'ads_section'
