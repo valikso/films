@@ -7,7 +7,6 @@ class PagesController < ApplicationController
   def about_us
     @info_contact_request = ContactRequest.count
     @info_users = User.count
-
   end
 
   def contact_us

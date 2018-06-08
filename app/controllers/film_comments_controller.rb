@@ -1,6 +1,6 @@
 class FilmCommentsController < ApplicationController
   def create
-    @film = FilmComment.find(params[:film_id])
+    @film = Film.find(params[:film_id])
     @comment = @film.film_comments.create(comment_params)
     redirect_to film_path(@film)
   end
@@ -15,6 +15,6 @@ class FilmCommentsController < ApplicationController
 
 private
   def comment_params
-    params.require(:comment).permit(:user_name, :message, :film_id)
+    params.require(:film_comment).permit(:user_name, :message, :film)
   end
 end
