@@ -41,7 +41,7 @@
     %li.nav-item.mobile-side-navbar__list__list-item.border-0
       %a.text-left.nav-link.bottom_links_item.text-muted.text-capitalize.size07{ href: "#"}= t('mobile-nav-bottom.About Us')
 
-%nav.mobile-site-navbar.navbar.px-md-0.navbar-fixed-top.navbar-expand-md.nav-light.py-0
+%nav.mobile-site-navbar.navbar.px-md-0.navbar-expand-md.nav-light.py-0
   .container
     .d-flex.canvas-menu.mobile-site-navbar__canvas-mobile-navigation.d-md-none
       %button.nav-canvas-button.navbar-toggle.p-0{"data-canvas" => "body", "data-target" => "#myNavmenu", "data-toggle" => "offcanvas", :type => "button"}
@@ -57,7 +57,7 @@
           %li.nav-item.nav_desktop
             %a.text-white{ href: root_path }Home
           %li.nav-item.nav_desktop
-            %a.text-white{ href: "#" } About us
+            %a.text-white{ href: about_us_path } About us
 
           -#
           -# %li.nav-item.nav_desktop
