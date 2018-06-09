@@ -1,5 +1,5 @@
 ActiveAdmin.register Film do
-  permit_params :title, :logo, :description, :year, :author, :small_description, :films_category_id
+  permit_params :title, :logo, :description, :year, :author, :small_description, :films_category_id, :films_page_view_count
 
   index do
     id_column
@@ -24,6 +24,7 @@ ActiveAdmin.register Film do
       row :films_category
       row :description
       row :small_description
+      row :films_page_view_count
       row :logo do |film|
         if film.logo.present?
           image_tag film.logo.url, style: 'width: 80px;'
@@ -39,6 +40,7 @@ ActiveAdmin.register Film do
       f.input :author
       f.input :films_category
       f.input :description
+      f.input :films_page_view_count
       f.input :small_description
       f.input :logo, :as => :file, :hint => f.object.logo.present? \
                                ? image_tag(f.object.logo.url, style: "max-width:300px;") : content_tag(:span, "no logo image yet")

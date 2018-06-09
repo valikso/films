@@ -62,6 +62,9 @@
           %li.nav-item.nav_desktop
             %a.text-white{ href: contact_us_path } Contact us
 
+          %li.nav-item.nav_desktop
+            %a.text-white{ href: order_table_path } Order table
+
           - unless current_user
             %li.nav-item.nav_desktop
               = link_to "Sign in", new_user_session_path , class: ''
@@ -75,6 +78,13 @@
 
             %li.nav-item.nav_desktop
               = link_to current_user.first_name
+      %ul.navbar-nav.ml-1
+        %li.nav-item
+          %span
+            %form.form-inline.my-2.my-lg-0
+              %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+              %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+
             -# = current_user.first_name
             -# .btn-group{"aria-label" => "Button group with nested dropdown", :role => "group"}
             -#   %button.btn.btn-secondary{:type => "button"} 1
@@ -86,19 +96,17 @@
             -#       %a.dropdown-item{:href => "#"} Dropdown link
             -#       %a.dropdown-item{:href => "#"} Dropdown link
 
-      -#   %ul.navbar-nav.ml-1
-      -#     %li.nav-item
-      -#       - if ar_locale?
-      -#         %a.nav-link.nav_en.nav_locale.px-0{ class: "#{en_locale? ? "active" : "not_active" }", href: "#{ en_locale? ? '#' : '/en/set_locale' }" }
-      -#           = image_tag "eng.png"
-      -#           %span.link_header.text-white
-      -#             English
-      -#       - else
-      -#         %a.nav-link.nav_ar.nav_locale.px-0{ class: "#{ar_locale? ? "active" : "not_active" }", href: "#{ ar_locale? ? '#' : '/ar/set_locale' }" }
-      -#           = image_tag "arabian.svg"
-      -#           %span.link_header.text-white
-      -#             العربية
-      -#
+        -# %ul.navbar-nav.ml-1
+        -#   %li.nav-item
+        -#     %a.nav-link.nav_en.nav_locale.px-0{ class: "active"}, href: "#" }
+        -#     %span.link_header.text-white
+        -#       English
+            -# - else
+            -#   %a.nav-link.nav_ar.nav_locale.px-0{ class: "#{ar_locale? ? "active" : "not_active" }", href: "#{ ar_locale? ? '#' : '/ar/set_locale' }" }
+            -#     = image_tag "arabian.svg"
+            -#     %span.link_header.text-white
+            -#       العربية
+
     -#   - if current_user
     -#     -# %li.nav-item
     -#     -#   %a.nav-link.pr-0{ href: with_locale(compare_index_path), title: t('nav_compare') }

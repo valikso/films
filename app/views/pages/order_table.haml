@@ -1,0 +1,33 @@
+.container.pt-3
+  .row
+    .col-5.offset-3.page_contact_us.text-left
+      .page_contact_us__head
+        %h6
+          Order Table
+        .mt-4
+      = form_for @order, url: save_new_order_post_path do |f|
+        .form-group
+          = f.label :user_name, class: 'sr-only'
+          = f.text_field :user_name, class: "form-control contact_us__input" , placeholder: 'Your Name'
+        .form-group
+          = f.label :film_name, class: 'sr-only'
+          = f.text_field :film_name, class: "form-control contact_us__input" , placeholder: "Ender film name"
+        .form-group
+          = f.label :film_year, class: 'sr-only'
+          = f.text_field :film_year, class: "form-control contact_us__input" , placeholder: "Ender film year"
+        .form-group
+          = f.label :comment, class: 'sr-only'
+          = f.text_area :comment, class: "form-control contact_us__input" , placeholder: "Your Message"
+        .form-group
+          = f.submit "Submit", class: 'size08 btn btn-brown btn-contact'
+      .page_contact_us__foot.size07
+        %p.text-muted.m-0.p-0
+          = t('contact_us_page.GENERAL INFORMATION')
+        %p.m-0.p-0.pb-3
+          -# = GeneralConfig.contact_us_mail
+          This text no provide
+        %p.text-muted.m-0.p-0
+          = t('contact_us_page.YOU CAN ALSO CALL US ON')
+        %P
+          Telefone
+          +34324 432423

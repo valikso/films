@@ -25,8 +25,28 @@ class PagesController < ApplicationController
       end
     end
   end
+  #order page
+  def order_table
+    @order = OrderTable.new
+  end
 
-  private
+  def save_new_order
+    @order = OrderTable.create(order_tables_params)
+    respond_to do |format|
+      if @order.save
+        format.html { redirect_to contact_us_url, notice: 'Your order was successfully saved.' }
+      else
+        format.html { redirect_to contact_us_url, notice: 'Fail.' }
+      end
+    end
+  end
+
+private
+
+  def order_tables_params
+  params.require(:order_table).permit(:film_name, :user_name, :comment, :film_year)
+  end
+
 
   def contact_request_params
   params.require(:contact_request).permit(:user_name, :email, :message)
