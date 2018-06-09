@@ -24,3 +24,45 @@ if User.count <= 20
                    password_confirmation: password)
   end
 end
+
+
+if FilmsCategory.count == 0
+  categories = [
+    "аниме",
+    "биографический",
+    "боевик",
+    "вестерн",
+    "военный",
+    "детектив",
+    "детский",
+    "документальный",
+    "драма",
+    "исторический",
+    "кинокомикс",
+    "комедия",
+    "концерт",
+    "короткометражный",
+    "криминал",
+    "мелодрама",
+    "мистика",
+    "музыка",
+    "мультфильм",
+    "мюзикл",
+    "научный",
+    "приключения",
+    "реалити-шоу",
+    "семейный",
+    "спорт",
+    "ток-шоу",
+    "триллер",
+    "ужасы",
+    "фантастика",
+    "фильм-нуар",
+    "фэнтези"]
+
+  categories.each do |category|
+    category = category.capitalize
+    FilmsCategory.create(name: category)
+  end
+  puts "Categories has been created"
+end
