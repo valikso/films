@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-12
+      %form.form-inline.mb-3.justify-content-sm-end
+        -# = select_tag :available_country_id,  grouped_options_for_select(available_countries, params[:available_country_id] || current_user.try(:available_country_id)), { prompt: t('filter.select_country'), class: 'mr-sm-2 mb-2 mb-sm-0 search-category-id form-control news_search__input' }
+        = text_field_tag :film_search, params[:film_search], placeholder: 'Search in Films', class: 'mr-sm-2 form-control news_search__input'
+        = text_field_tag :films_category_search, params[:films_category_search], placeholder: 'Search in Category', class: 'mr-sm-2 form-control news_search__input'
+        %button.btn.btn-brown.size065.radius.mt-1{ type: 'submit' }
+          Search
+  .row
+    .col
+      - @films.each do |film|
+        %p
+          = film.title

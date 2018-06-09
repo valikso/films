@@ -5,6 +5,12 @@ class FilmsController < ApplicationController
   end
   def index
     @films = Film.all
+    @films = @films.where("title ILIKE :title",
+              { title: "%#{params[:film_search]}%" }) if params[:film_search].present? && params[:film_search].length > 1
+    # @category = FilmsCategory
+    # @categories = @category.all.where("name ILIKE :name",
+    #           { name: "%#{params[:films_category_search]}%" }) if params[:films_category_search].present?
+
   end
 private
 

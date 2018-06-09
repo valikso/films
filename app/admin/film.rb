@@ -6,6 +6,7 @@ ActiveAdmin.register Film do
     column :title
     column :year
     column :author
+    column :films_category
       column :logo, :sortable => false do |e|
         if e.logo.present?
           image_tag(e.logo.url, style: "max-height:50px;")
@@ -20,6 +21,7 @@ ActiveAdmin.register Film do
       row :title
       row :year
       row :author
+      row :films_category
       row :description
       row :small_description
       row :logo do |film|

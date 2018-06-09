@@ -59,30 +59,15 @@
           %li.nav-item.nav_desktop
             %a.text-white{ href: about_us_path } About us
 
-          -#
-          -# %li.nav-item.nav_desktop
-          -#   %a.text-white{ href: "#"}= t('nav.Exhibition Calendar')
-          -#
-          -# %li.nav-item.nav_desktop
-          -#   %a.text-white{ href: "#"}= t('nav.Auctions Calendar')
-          -#
-          -# %li.nav-item.nav_desktop
-          -#   %a.text-white{ href: "#" }= t('nav.How to Buy')
-          -#
-          -# %li.nav-item.nav_desktop
-          -#
-          -# %li.nav-item.nav_desktop
-          -# %a.text-white{ href: "#"}= t('nav.News')
-          -#   %a.text-white{ href: "#" }= t('nav.How to Sell')
           %li.nav-item.nav_desktop
             %a.text-white{ href: contact_us_path } Contact us
 
           - unless current_user
             %li.nav-item.nav_desktop
-              = link_to t('nav.Sign in'), new_user_session_path , class: ''
+              = link_to "Sign in", new_user_session_path , class: ''
 
             %li.nav-item.nav_desktop
-              = link_to t('nav.Sign up'), new_user_registration_path , class: ''
+              = link_to "Sign up", new_user_registration_path , class: ''
 
           - if current_user
             %li.nav-item.nav_desktop.text-right

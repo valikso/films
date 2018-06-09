@@ -7,8 +7,12 @@
     Total count of users:
     %span.text-brown
       #{@info_users}
+  %h1
+    Total count of Films:
+    %span.text-brown
+      #{@info_films}
 
-      
+
   %h1.mt-5
     Overview: How the Pieces Fit Together
   This guide focuses on the interaction between Controller and View in the Model-View-Controller triangle. As you know, the Controller is responsible for orchestrating the whole process of handling a request in Rails, though it normally hands off any heavy code to the Model. But then, when it's time to send a response back to the user, the Controller hands things off to the View. It's that handoff that is the subject of this guide.
